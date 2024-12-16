@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class action_buttons : MonoBehaviour
 {
+    public check check;
     public void cultivate(int num_day)
     {
         static_variables.current_action_point += num_day;
         static_variables.current_xp += num_day * static_variables.current_speed;
+        check.checkdays();
         Debug.Log(static_variables.current_xp);
     }
     public void learn(int add_modifier){
