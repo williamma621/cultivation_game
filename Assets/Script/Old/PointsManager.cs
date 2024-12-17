@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 using TMPro;
 
@@ -104,3 +105,4 @@ Mana:
     }
 
 }
+*/

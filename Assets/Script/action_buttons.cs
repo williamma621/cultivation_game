@@ -1,21 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class action_buttons : MonoBehaviour
 {
-    public check check;
     public void cultivate(int num_day)
     {
-        static_variables.current_action_point += num_day;
-        static_variables.current_xp += num_day * static_variables.current_speed;
-        check.checkdays();
-        Debug.Log(static_variables.current_xp);
+        static_variables.player.Cultivate(num_day);
+        Debug.Log(static_variables.player.xp);
     }
     public void learn(int add_modifier){
-        static_variables.current_speed += add_modifier;
+        static_variables.player.knowledge += add_modifier;
         //static_variables.current_speed *= multi_modifier;
-        Debug.Log(static_variables.current_speed);
+        Debug.Log(static_variables.player.knowledge);
     }
 }

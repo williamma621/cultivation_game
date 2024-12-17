@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 
 public class Actions : MonoBehaviour
@@ -40,3 +41,4 @@ public class Actions : MonoBehaviour
 
 
 }
+*/
