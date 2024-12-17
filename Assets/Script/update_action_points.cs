@@ -8,6 +8,8 @@ public class update_action_points : MonoBehaviour
 {
    
     public TMP_Text personalText;
+    public Variables variables;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +22,12 @@ public class update_action_points : MonoBehaviour
        
         personalText.text = $@"
 Name: Player
-Age: {static_variables.current_year}/{static_variables.max_year}
-Days: {static_variables.current_action_point}/365
+Age: {variables.current_year}/{variables.max_year}
+Days: {variables.current_action_point}/365
 Reputation: 
 Morality: 
-Cultivation Points: {static_variables.current_xp}
-Knowledge: {static_variables.current_speed}
+Cultivation Points: {variables.current_xp}
+Knowledge: {variables.current_speed}
 Realm: Qi Gathering Stage
 Gold: 
 Health: 
