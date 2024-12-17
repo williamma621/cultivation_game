@@ -3,16 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class check : MonoBehaviour
+public class Check : MonoBehaviour
 {
- 
+    public Variables variables;
     public void checkdays()
     {
         
-      if (static_variables.current_action_point >= 365)
+      if (variables.current_action_point >= 365)
       {
-            static_variables.current_action_point -= 365;
-            static_variables.current_year += 1;
+            variables.current_action_point -= 365;
+            variables.current_year += 1;
 
        }
 

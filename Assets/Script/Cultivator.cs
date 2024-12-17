@@ -3,7 +3,7 @@ public class Cultivator
 {
     public int age_years { get; private set; }
     public int age_days { get; private set; }
-    public int max_age {get; private set; }
+    public int max_age { get; private set; }
     public int xp { get; private set; }
     public int level { get; private set; }
     public int knowledge; //{ get; private set; }
@@ -26,13 +26,17 @@ public class Cultivator
     }
 
     public void Cultivate(int days){
+    public void Cultivate(int days)
+    {
         AddDays(days);
         xp += days * knowledge;
     }
 
     private void NormalizeTime()
     {
-        if (age_days < 0){
+  
+        if (age_days < 0)
+        {
             age_days = 0;
             Debug.Log("Error in age_days");
         }
@@ -58,6 +62,6 @@ public class Cultivator
     Attack: 
     Defense: 
     Mana: 
-";;
+"; ;
     }
 }
