@@ -11,7 +11,7 @@ public class action_buttons : MonoBehaviour
     public void cultivate(int num_day)
     {
         variables.player.Cultivate(num_day);
-        string action = "Cultivated for "+ num_day + " days. Earned " + num_day * 2 +" Cultivation points.";
+        string action = "Cultivated for "+ num_day + " days. Earned " + num_day * variables.player.xp +" Cultivation points.";
         historyLog.AddHistory(action); // Log the action
         Debug.Log(variables.player.xp);
     }
