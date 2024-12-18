@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class menu_buttons : MonoBehaviour
+public class show_tabs : MonoBehaviour
 {
     public GameObject mainCamera;
     public GameObject[] tabs; // Array of all canvases/tabs

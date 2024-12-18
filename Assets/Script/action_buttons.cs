@@ -6,31 +6,18 @@ using UnityEngine;
 
 public class action_buttons : MonoBehaviour
 {
-    public void cultivate(int num_day)
-    {
-        static_variables.player.Cultivate(num_day);
-        Debug.Log(static_variables.player.xp);
-    }
-    public void learn(int add_modifier){
-        static_variables.player.knowledge += add_modifier;
-        //static_variables.current_speed *= multi_modifier;
-        Debug.Log(static_variables.player.knowledge);
-    public Check check;
     public Variables variables;
     public HistoryLog historyLog;
     public void cultivate(int num_day)
     {
-        variables.current_action_point += num_day;
-        int a = num_day * variables.current_speed;
-        variables.current_xp += a;
-        check.checkdays();
-        variables.action = "Cultivated for "+ num_day + " days. Earned " + a +" Cultivation points.";
-        historyLog.AddHistory(variables.action); // Log the action
-        Debug.Log(variables.current_xp);
+        variables.player.Cultivate(num_day);
+        string action = "Cultivated for "+ num_day + " days. Earned " + num_day * 2 +" Cultivation points.";
+        historyLog.AddHistory(action); // Log the action
+        Debug.Log(variables.player.xp);
     }
     public void learn(int add_modifier){
-       variables.current_speed += add_modifier;
+        variables.player.knowledge += add_modifier;
         //static_variables.current_speed *= multi_modifier;
-        Debug.Log(variables.current_speed);
+        Debug.Log(variables.player.xp);
     }
 }

@@ -25,7 +25,6 @@ public class Cultivator
         NormalizeTime();
     }
 
-    public void Cultivate(int days){
     public void Cultivate(int days)
     {
         AddDays(days);
