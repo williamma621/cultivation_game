@@ -8,10 +8,13 @@ public class action_buttons : MonoBehaviour
 {
     public Variables variables;
     public HistoryLog historyLog;
-    public void cultivate(int num_day)
+
+
+    
+    public void cultivate()
     {
-        variables.player.Cultivate(num_day);
-        string action = "Cultivated for "+ num_day + " days. Earned " + num_day * variables.player.xp +" Cultivation points.";
+        variables.player.Cultivate(variables.cultivatetime);
+        string action = "Cultivated for "+ variables.cultivatetime + " days. Earned " + variables.cultivatetime * variables.player.knowledge + " Cultivation points.";
         historyLog.AddHistory(action); // Log the action
         Debug.Log(variables.player.xp);
     }
@@ -20,4 +23,6 @@ public class action_buttons : MonoBehaviour
         //static_variables.current_speed *= multi_modifier;
         Debug.Log(variables.player.xp);
     }
+
+
 }
