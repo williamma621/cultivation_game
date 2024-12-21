@@ -7,6 +7,7 @@ public class Cultivator
     public int xp { get; private set; }
     public int level { get; private set; }
     public int knowledge; //{ get; private set; }
+    public string history;
 
     // Constructor
     public Cultivator()
@@ -17,6 +18,7 @@ public class Cultivator
         xp = 0;
         level = 0;
         knowledge = 0;
+        history = '';
     }
 
     public void AddDays(int daysToAdd)
@@ -24,7 +26,9 @@ public class Cultivator
         age_days += daysToAdd;
         NormalizeTime();
     }
-
+    public void AddHistory(string action){
+        history += action + "\n";
+    }
     public void Cultivate(int days)
     {
         AddDays(days);
