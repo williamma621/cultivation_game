@@ -686,6 +686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollRect: {fileID: 107332121}
   historyText: {fileID: 784106375}
+  autoScroll: 1
 --- !u!1 &155113683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,6 +1853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personalText: {fileID: 155113685}
   variables: {fileID: 1188966051}
+  historyText: {fileID: 0}
 --- !u!1 &575186821
 GameObject:
   m_ObjectHideFlags: 0

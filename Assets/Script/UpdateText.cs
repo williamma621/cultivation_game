@@ -4,11 +4,11 @@ using UnityEngine;
 using TMPro;
 
 
-public class update_text : MonoBehaviour
+public class UpdateText : MonoBehaviour
 {
-   
-    public TMP_Text personalText;
     public Variables variables;
+    public TMP_Text personalText;
+    public TextMeshProUGUI historyText;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +17,14 @@ public class update_text : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    }
+
+    public void UpdatePersonal(){
         personalText.text = variables.player.ToString();
+    }
+
+    public void UpdateHistory(string action)
+    {
+        historyText.text = variables.player.history;
     }
 }
