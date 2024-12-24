@@ -6,4 +6,6 @@ public class Variables : MonoBehaviour
 {    
     public Cultivator player = new Cultivator();
     public int cultivatetime = 1;
+
+
 }

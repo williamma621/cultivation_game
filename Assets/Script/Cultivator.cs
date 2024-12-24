@@ -4,10 +4,11 @@ public class Cultivator
     public int age_years { get; private set; }
     public int age_days { get; private set; }
     public int max_age { get; private set; }
-    public int xp { get; private set; }
-    public int level { get; private set; }
+    public int xp;
+    public int level;
     public int knowledge; //{ get; private set; }
     public string history;
+    public int requiredxp;
 
     // Constructor
     public Cultivator()
@@ -18,7 +19,8 @@ public class Cultivator
         xp = 0;
         level = 0;
         knowledge = 0;
-        history = '';
+        history = "";
+        requiredxp = 100;
     }
 
     public void AddDays(int daysToAdd)
@@ -59,7 +61,7 @@ public class Cultivator
     Morality: 
     Cultivation Points: {xp}
     Knowledge: {knowledge}
-    Realm: Qi Gathering Stage
+    Realm: 练气{level}层
     Gold: 
     Health: 
     Attack: 

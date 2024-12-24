@@ -8,9 +8,9 @@ public class action_buttons : MonoBehaviour
 {
     public Variables variables;
     public UpdateText updateText;
+    public GameObject Popup;
 
 
-    
     public void cultivate()
     {
         variables.player.Cultivate(variables.cultivatetime);
@@ -26,4 +26,30 @@ public class action_buttons : MonoBehaviour
         //static_variables.current_speed *= multi_modifier;
         Debug.Log(variables.player.xp);
     }
+
+    public void Breakthrough()
+    {
+        if (variables.player.xp >= variables.player.requiredxp)
+        {
+            variables.player.xp -= variables.player.requiredxp;
+            variables.player.requiredxp += 100;
+            variables.player.level += 1;
+            updateText.UpdatePersonal();
+        }
+        else{
+            Debug.Log("not enough points");
+        }
+
+    }
+    public void PopupFunction()
+    {
+        
+        Popup.SetActive(true);
+
+        if (Input.GetMouseButtonDown(0)) {
+            Popup.SetActive(false);
+       
+        }
+    }
+
 }

@@ -23,7 +23,7 @@ public class UpdateText : MonoBehaviour
         personalText.text = variables.player.ToString();
     }
 
-    public void UpdateHistory(string action)
+    public void UpdateHistory()
     {
         historyText.text = variables.player.history;
     }
